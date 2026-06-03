@@ -1,0 +1,30 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "Learning namaste React from AS",
+  "keywords": [],
+  "homepage": "https://github.com/Karan2109/namaste-react#readme",
+  "bugs": {
+    "url": "https://github.com/Karan2109/namaste-react/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Karan2109/namaste-react.git"
+  },
+  "license": "ISC",
+  "author": "Karan Singh",
+  "type": "commonjs",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "browserslist": [
+    "> 0.2%, not dead"
+  ]
+}

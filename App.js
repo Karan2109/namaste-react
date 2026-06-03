@@ -9,7 +9,7 @@ const header = React.createElement(
         React.createElement(
             "h1",
             { id: "heading1" },
-            "First Heading"
+            "Hello I am Learning Namaste React"
         ),
 
         React.createElement(
