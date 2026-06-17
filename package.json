@@ -15,6 +15,8 @@
   "author": "Karan Singh",
   "type": "commonjs",
   "scripts": {
+    "start": "parcel index2.html",
+    "build": "parcel build index2.html",
     "test": "jest"
   },
   "devDependencies": {
