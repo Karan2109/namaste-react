@@ -1,62 +1,201 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
+export const restaurants = [
+  {
+    id: 1,
+    name: "BiteRush Cafe",
+    cuisine: "Italian",
+    rating: 4.5,
+    deliveryTime: "25 mins",
+    costForTwo: 600,
+    image: "https://picsum.photos/300/200?random=1",
+  },
+  {
+    id: 2,
+    name: "Spice Villa",
+    cuisine: "North Indian",
+    rating: 4.3,
+    deliveryTime: "30 mins",
+    costForTwo: 500,
+    image: "https://picsum.photos/300/200?random=2",
+  },
+  {
+    id: 3,
+    name: "Burger Junction",
+    cuisine: "Fast Food",
+    rating: 4.1,
+    deliveryTime: "20 mins",
+    costForTwo: 400,
+    image: "https://picsum.photos/300/200?random=3",
+  },
+  {
+    id: 4,
+    name: "Sushi World",
+    cuisine: "Japanese",
+    rating: 4.7,
+    deliveryTime: "35 mins",
+    costForTwo: 1200,
+    image: "https://picsum.photos/300/200?random=4",
+  },
+  {
+    id: 5,
+    name: "Pizza Hub",
+    cuisine: "Pizza",
+    rating: 4.4,
+    deliveryTime: "28 mins",
+    costForTwo: 700,
+    image: "https://picsum.photos/300/200?random=5",
+  },
+  {
+    id: 6,
+    name: "Tandoori Nights",
+    cuisine: "Indian",
+    rating: 4.6,
+    deliveryTime: "32 mins",
+    costForTwo: 800,
+    image: "https://picsum.photos/300/200?random=6",
+  },
+  {
+    id: 7,
+    name: "Dragon Bowl",
+    cuisine: "Chinese",
+    rating: 4.2,
+    deliveryTime: "22 mins",
+    costForTwo: 550,
+    image: "https://picsum.photos/300/200?random=7",
+  },
+  {
+    id: 8,
+    name: "Healthy Bites",
+    cuisine: "Salads",
+    rating: 4.8,
+    deliveryTime: "18 mins",
+    costForTwo: 650,
+    image: "https://picsum.photos/300/200?random=8",
+  },
+  {
+    id: 9,
+    name: "Taco Fiesta",
+    cuisine: "Mexican",
+    rating: 4.3,
+    deliveryTime: "27 mins",
+    costForTwo: 750,
+    image: "https://picsum.photos/300/200?random=9",
+  },
+  {
+    id: 10,
+    name: "Street Eats",
+    cuisine: "Street Food",
+    rating: 4.0,
+    deliveryTime: "15 mins",
+    costForTwo: 300,
+    image: "https://picsum.photos/300/200?random=10",
+  },
+  {
+    id: 11,
+    name: "Pasta Palace",
+    cuisine: "Italian",
+    rating: 4.5,
+    deliveryTime: "26 mins",
+    costForTwo: 850,
+    image: "https://picsum.photos/300/200?random=11",
+  },
+  {
+    id: 12,
+    name: "BBQ Nation Express",
+    cuisine: "Barbecue",
+    rating: 4.7,
+    deliveryTime: "38 mins",
+    costForTwo: 1000,
+    image: "https://picsum.photos/300/200?random=12",
+  },
+  {
+    id: 13,
+    name: "Dosa Corner",
+    cuisine: "South Indian",
+    rating: 4.4,
+    deliveryTime: "19 mins",
+    costForTwo: 350,
+    image: "https://picsum.photos/300/200?random=13",
+  },
+  {
+    id: 14,
+    name: "Momo House",
+    cuisine: "Tibetan",
+    rating: 4.2,
+    deliveryTime: "24 mins",
+    costForTwo: 450,
+    image: "https://picsum.photos/300/200?random=14",
+  },
+  {
+    id: 15,
+    name: "Sweet Treats",
+    cuisine: "Desserts",
+    rating: 4.9,
+    deliveryTime: "17 mins",
+    costForTwo: 500,
+    image: "https://picsum.photos/300/200?random=15",
+  },
+];
+
 const Heading = () => {
-    return (
-        <div className="header">
-            <div className="logo-container">
-                <img className="logo" src="https://png.pngtree.com/png-vector/20221218/ourmid/pngtree-simple-and-modern-food-logo-vector-design-png-image_6527848.png" alt="logo" />
-            </div>
-            <div className="nav-items">
-                <ul>
-                    <li>Home</li>
-                    <li>Menu</li>
-                    <li>About</li>
-                    <li>Contact</li>
-                    <li>Cart</li>
-                </ul>
-            </div>
-        </div>
-    )
+  return (
+    <div className="header">
+      <div className="logo-container">
+        <img className="logo" src="https://png.pngtree.com/png-vector/20221218/ourmid/pngtree-simple-and-modern-food-logo-vector-design-png-image_6527848.png" alt="logo" />
+      </div>
+      <div className="nav-items">
+        <ul>
+          <li>Home</li>
+          <li>Menu</li>
+          <li>About</li>
+          <li>Contact</li>
+          <li>Cart</li>
+        </ul>
+      </div>
+    </div>
+  )
 }
 
-const Resturantcard = () => {
-    return (
-        <div className="res-card">
-            <img className="biryani" src="https://i.pinimg.com/736x/ce/99/19/ce9919d8c596f8d0d68c14ac5bb3693d.jpg" alt="biryani"></img>
-            <h3>Reena Foods</h3>
-            <h4 className="cusine">Briyani, South-Indian, Chicken</h4>
-            <h4 className="rating">4.3 Stars</h4>
-            <h4 className="time">40 minutes</h4>
-        </div>
-    )
+const Resturantcard = (props) => {
+  const { resData } = props
+
+  const { image, name, cuisine, rating, deliveryTime, costForTwo } = resData;
+  return (
+    <div className="res-card">
+      <img className="food" src={image} alt={name}></img>
+      <h3 className="name">{name}</h3>
+      <h4 className="cusine">Cusine: {cuisine}</h4>
+      <h4 className="rating">Rating: {rating}</h4>
+      <h4 className="time">Reaching time: {deliveryTime}</h4>
+      <h4 className="cost">Cost of product: {costForTwo}</h4>
+    </div>
+  )
 }
 
 const Body = () => {
-    return (
-        <div className="body">
-            <div className="search">Search bar</div>
-            <div className="res-container">
-                <Resturantcard />
-                <Resturantcard />
-                <Resturantcard />
-                <Resturantcard />
-                <Resturantcard />
-                <Resturantcard />
-                <Resturantcard />
-                <Resturantcard />
-            </div>
-        </div>
-    )
+  return (
+    <div className="body">
+      <div className="search">Search bar</div>
+      <div className="res-container">
+        {
+          restaurants.map((rest, id) => {
+            return <Resturantcard key={id} resData={rest} />
+          })
+        }
+      </div>
+    </div>
+  )
 }
 
 const AppLayout = () => {
-    return (
-        <div className="app">
-            <Heading />
-            <Body />
-        </div>
-    )
+  return (
+    <div className="app">
+      <Heading />
+      <Body />
+    </div>
+  )
 }
 
 
