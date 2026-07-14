@@ -24,7 +24,8 @@
   },
   "dependencies": {
     "react": "^19.2.7",
-    "react-dom": "^19.2.7"
+    "react-dom": "^19.2.7",
+    "react-router-dom": "^6.30.4"
   },
   "browserslist": [
     "> 0.2%, not dead"
