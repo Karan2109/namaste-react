@@ -18,21 +18,22 @@ class About extends React.Component {
     constructor(props) {
         super(props);
 
-        console.log("Parent Constructor called")
+        // console.log("Parent Constructor called")
     }
 
     componentDidMount() {
-        console.log("Parent ComponentDidMount called")
+        // console.log("Parent ComponentDidMount called")
     }
 
     render() {
-        console.log("Parent Render called")
+        // console.log("Parent Render called")
         return (
             <div>
                 <h1>About Class Component</h1>
                 {/* <User name={"Karan Singh (Function)"}/> */}
-                <UserClass name={"Karan Singh (Class)"} location={"Mumbai Class"} />
-                <UserClass name={"Karan Singh (Class)"} location={"Mumbai Class"} />
+                <User name={"Karan Singh (Function)"}/>
+                {/* <UserClass name={"Karan Singh (Class)"} location={"Mumbai Class"} /> */}
+                {/* <UserClass /> */}
             </div>
 
         )

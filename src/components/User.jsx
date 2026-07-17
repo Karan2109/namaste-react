@@ -1,10 +1,23 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const User = ({ name }) => {
 
     const [count] = useState(0);
     const [count2] = useState(1);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            console.log("1st")
+        }, 1000)
+
+        return () => {
+            clearInterval(timer)
+            console.log("2nd")
+        }
+    }, [])
+
+    console.log("3rd")
 
     return (
         <div className='user-card'>
