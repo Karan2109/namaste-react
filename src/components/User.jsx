@@ -8,16 +8,16 @@ const User = ({ name }) => {
 
     useEffect(() => {
         const timer = setInterval(() => {
-            console.log("1st")
+            // console.log("1st")
         }, 1000)
 
         return () => {
             clearInterval(timer)
-            console.log("2nd")
+            // console.log("2nd")
         }
     }, [])
 
-    console.log("3rd")
+    // console.log("3rd")
 
     return (
         <div className='user-card'>

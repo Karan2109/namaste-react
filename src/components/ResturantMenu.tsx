@@ -1,9 +1,14 @@
 import React from 'react'
+import useResturantMenu from '../utils/useResturantMenu'
+import { useParams } from 'react-router-dom';
 // import { useEffect, useState } from "react"
 // import Shimmer from './Shimmer';
-// import { useParams } from 'react-router-dom';
 
 const ResturantMenu = () => {
+
+    const { resId } = useParams();
+
+    const resInfo = useResturantMenu(resId);
 
     // const [resInfo, setResInfo] = useState(null)
 
