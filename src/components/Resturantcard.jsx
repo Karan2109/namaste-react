@@ -9,9 +9,9 @@ const Resturantcard = ({ resData }) => {
     } = resData;
 
     return (
-        <div className="res-card">
+        <div className="m-4 p-4 w-62 bg-gray-100">
             <img
-                className="food"
+                className="rounded-xl py-4"
                 src={
                     "https://media-assets.swiggy.com/swiggy/image/upload/" +
                     cloudinaryImageId
@@ -19,7 +19,7 @@ const Resturantcard = ({ resData }) => {
                 alt={name}
             />
 
-            <h3>{name}</h3>
+            <h3 className="font-bold text-orange-400 text-xl">{name}</h3>
             <h4>{cuisines.join(", ")}</h4>
             <h4>⭐ {avgRating}</h4>
             <h4>{sla?.slaString}</h4>
