@@ -8,7 +8,7 @@ const Body = () => {
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");
 
-  const ResturantCardPromoted = withPromotedLabel(Resturantcard);
+  // const ResturantCardPromoted = withPromotedLabel(Resturantcard);
 
   console.log("Body Gets Rendered", listOfRestaurants)
 
@@ -83,13 +83,7 @@ const Body = () => {
       </div>
       <div className="flex flex-wrap">
         {filteredRestaurants?.map((rest, id) => {
-          return
-          { rest.info.avgRating ? (
-            <ResturantCardPromoted resData={rest.info} />) 
-            : (
-            <Resturantcard key={rest.info.id} resData={rest.info} />
-          )}
-          ;
+          return <Resturantcard key={rest.info.id} resData={rest.info} />;
         })}
       </div>
     </div>
