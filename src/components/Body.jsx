@@ -1,4 +1,4 @@
-import Resturantcard from "./Resturantcard";
+import Resturantcard, { withPromotedLabel } from "./Resturantcard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import useOnlineStatus from "../utils/useOnlineStatus";
@@ -8,7 +8,9 @@ const Body = () => {
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");
 
-  // console.log("Body Gets Rendered")
+  const ResturantCardPromoted = withPromotedLabel(Resturantcard);
+
+  console.log("Body Gets Rendered", listOfRestaurants)
 
   useEffect(() => {
     fetchData();
@@ -81,7 +83,13 @@ const Body = () => {
       </div>
       <div className="flex flex-wrap">
         {filteredRestaurants?.map((rest, id) => {
-          return <Resturantcard key={rest.info.id} resData={rest.info} />;
+          return
+          { rest.info.avgRating ? (
+            <ResturantCardPromoted resData={rest.info} />) 
+            : (
+            <Resturantcard key={rest.info.id} resData={rest.info} />
+          )}
+          ;
         })}
       </div>
     </div>
