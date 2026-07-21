@@ -10,7 +10,7 @@ const Body = () => {
 
   // const ResturantCardPromoted = withPromotedLabel(Resturantcard);
 
-  console.log("Body Gets Rendered", listOfRestaurants)
+  // console.log("Body Gets Rendered", listOfRestaurants)
 
   useEffect(() => {
     fetchData();
