@@ -51,12 +51,7 @@ const Header = () => {
           >
             {loginBtn}
           </button>
-<<<<<<< HEAD
-          <li className="px-4 font-bold">{data.loggedInUser}</li>
-
-=======
           <span className="text-xl font-bold">{loggedInUser}</span>
->>>>>>> bd73bbf1ccf5650244cc8797feb88cb0fb1fc72b
         </ul>
       </div>
     </div>
