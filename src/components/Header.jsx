@@ -22,7 +22,8 @@ const Header = () => {
   // console.log(data)
 
   // Subscribinig to the store using a Selector
-  const cart = useSelector((store) => store.cart.items);
+  const cartItems = useSelector((store) => store.cart.items);
+  console.log("Cart Items", cartItems);
 
   return (
     <div className="flex justify-between">
@@ -44,7 +45,7 @@ const Header = () => {
           <li>
             <Link to="/grocery">Grocery</Link>
           </li>
-          <li>Cart</li>
+          <li>Cart: {cartItems.length}</li>
           <button
             className="login"
             onClick={() => {
